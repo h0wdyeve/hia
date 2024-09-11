@@ -1,0 +1,380 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+  }
+  
+  .main-container {
+    overflow: hidden;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }
+  
+  .main-container {
+    position: relative;
+    width: 100%;
+    height: 1024px;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .flex-row {
+    position: relative;
+    width: 100%;
+    height: 312px;
+    margin: 0 0 0 0;
+    z-index: 10;
+  }
+  .rectangle {
+    
+    position: center;
+    width: 100%;
+    height: 40%;
+    top: 10;
+    left: 0;
+    background: #69abc1;
+    z-index: 10;
+  }
+  
+  /* .flex-row-dd {
+    width: 100%;
+    height: 30%;
+    margin-left: 20000px;
+
+  } */
+  /* .header-logo {
+    position: absolute;
+    top: 100;
+    height: 50;
+    margin: 20px 0 0 72px;
+  } */
+  .logo {
+    width: 80px;
+    height: 70px;
+    left: 65px;
+    top: 27px;
+    position: absolute;
+  }
+  /* .ellipse {
+    position: absolute;
+    border-radius: 50%;
+    width: 64.037px;
+    height: 61.994px;
+    top: 100;
+    left: 50;
+    background: #ffffff;
+    margin: 55px 0 0 0;
+    /*background: url("C:\sa-67\project\frontend\src\assets\f1e970e1-d36b-4109-8653-6121d9537717.png")
+      no-repeat center;
+    
+    background-size: cover;
+    z-index: 150;
+  } */
+   
+  .rectangle-1 button {
+    position: absolute;
+    width: 141.019px;
+    height: 37.469px;
+    top: 10%;
+    left: 15%;
+    z-index: 23;
+    border-radius: 9.38px;
+    color: #5f212e;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: Bree-Serif;
+    font-size: 19px;
+  }
+  /* .home {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 57px;
+    height: 30px;
+    top: 3.738px;
+    left: calc(50% - 29.3px);
+    color: #5f212e;
+    font-family: Bree-Serif;
+    font-size: 21.799999237060547px;
+    font-weight: 400;
+    line-height: 29.604px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 24;
+  } */
+  .rectangle-2 button {
+    position: absolute;
+    width: 141.019px;
+    height: 37.469px;
+    top: 10%;
+    left: 30%;
+    z-index: 20;
+    border-radius: 9.38px;
+    color: #5f212e;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: Bree-Serif;
+    font-size: 19px;
+  }
+  /* .flight {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 58px;
+    height: 30px;
+    top: 3.738px;
+    left: calc(50% - 28.77px);
+    color: #5f212e;
+    font-family: Bree-Serif;
+    font-size: 21.799999237060547px;
+    font-weight: 400;
+    line-height: 29.604px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 21;
+  } */
+  .rectangle-3 button {
+    position: absolute;
+    width: 141.019px;
+    height: 37.469px;
+    top: 10%;
+    left: 45%;
+    z-index: 17;
+    border-radius: 9.38px;
+    color: #5f212e;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: Bree-Serif;
+    font-size: 19px;
+  }
+  /* .benefits {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 4.087px;
+    left: calc(50% - 40.24px);
+    color: #5f212e;
+    font-family: Bree-Serif;
+    font-size: 21.799999237060547px;
+    font-weight: 400;
+    line-height: 29.604px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 18;
+  } */
+  .rectangle-4 button {
+    position: absolute;
+    width: 141.019px;
+    height: 37.469px;
+    top: 10%;
+    left: 60%;
+    z-index: 14;
+    border-radius: 9.38px;
+    color: #5f212e;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: Bree-Serif;
+    font-size: 19px;
+  }
+  .help-center {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 115px;
+    height: 30px;
+    top: 4.087px;
+    left: calc(50% - 57.71px);
+    color: #5f212e;
+    font-family: Bree-Serif;
+    /* font-family: Bree Serif, var(--default-font-family); */
+    font-size: 21.799999237060547px;
+    font-weight: 400;
+    line-height: 29.604px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 15;
+  }
+  /* .rectangle-5 {
+    position: absolute;
+    width: 486px;
+    height: 37.469px;
+    top: 44.5px;
+    left: 812px;
+    background: #ffffff;
+    z-index: 12;
+    border-radius: 9.38px;
+  } */
+  /* .rectangle-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 141.019px;
+    height: 37.469px;
+    margin: -9.469px 0 0 33px;
+    background: #ffffff;
+    z-index: 27;
+    border-radius: 9.38px;
+  } */
+  /* .mawmaw {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 96px;
+    height: 30px;
+    color: #5f212e;
+    font-family: Bree Serif, var(--default-font-family);
+    font-size: 21.799999237060547px;
+    font-weight: 400;
+    line-height: 29.604px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 100;
+  } */
+  .rectangle-7 {
+    position: absolute;
+    width: 100%;
+    height: 178px;
+    top: 120px;
+    left: 0;
+    background: #5f212e;
+    z-index: 8;
+  }
+  .select-airline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 65px;
+    top: 59px;
+    left: 472px;
+    color: #ffffff;
+    font-family: Bree-Serif;
+    /* font-family: Abril Fatface, var(--default-font-family); */
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64.752px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 9;
+  }
+  .flex-row-ff {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+    width: 1243px;
+    height: 259px;
+    margin: 153px 0 0 135px;
+    z-index: 7;
+  }
+  .rectangle-8 {
+    flex-shrink: 0;
+    position: relative;
+    width: 259px;
+    height: 259px;
+    background: #d8d1be;
+    z-index: 7;
+  }
+  .rectangle-9 {
+    flex-shrink: 0;
+    position: relative;
+    width: 259px;
+    height: 259px;
+    background: #d8d1be;
+    z-index: 3;
+  }
+  .rectangle-a {
+    flex-shrink: 0;
+    position: relative;
+    width: 259px;
+    height: 259px;
+    background: #d8d1be;
+    z-index: 5;
+  }
+  .rectangle-b {
+    flex-shrink: 0;
+    position: relative;
+    width: 259px;
+    height: 259px;
+    background: #d8d1be;
+    z-index: 1;
+  }
+  .flex-row-fb {
+    font-family: Bree-Serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 1076px;
+    height: 33px;
+    margin: 25px 0 0 230px;
+    z-index: 6;
+  }
+  .airline-1 {
+    font-family: Bree-Serif;
+    font-weight: bold;
+    color: #6E2B32;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    left: 11px;
+  }
+  .airline-2 {
+    font-family: Bree-Serif;
+    font-weight: bold;
+    color: #6E2B32;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    left: 1px;
+  }
+  .airline-3 {
+    font-family: Bree-Serif;
+    font-weight: bold;
+    color: #6E2B32;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    right: 10px;
+  }
+  .airline-4 {
+    font-family: Bree-Serif;
+    font-weight: bold;
+    color: #6E2B32;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    right: 22px;
+  }
+  @font-face {
+    font-family: Bree-Serif;
+    src: url(./assets/BreeSerif-Regular.ttf);
+  }
