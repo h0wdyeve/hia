@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/sa67-lab5/entity"
+	"github.com/h0wdyeve/hia/entity"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
+
 
 func main() {
 	db, err := gorm.Open(sqlite.Open("sa-entity.db"), &gorm.Config{})
