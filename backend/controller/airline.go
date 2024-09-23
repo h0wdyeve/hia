@@ -9,16 +9,13 @@ import (
 
 func GetAllAirline(c *gin.Context) {
 	var Airline []entity.Airline
-	db := config.DB()
 
-	results := db.Select("id, Package_name, Price, Duration").Find(&Airline) //อีฟแก้เอานะเราไม่รู้ต้องเอาไรบ้าง
-
-	if results.Error != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": results.Error.Error()})
+	if  err := config.DB().Preload("Benefits").Preload("Point_Calculator").Find(&Airline).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	c.JSON(http.StatusOK, Airline)
+	c.JSON(http.StatusOK, gin.H{"data": Airline})
 }
 
 func GetAirlineByID(c *gin.Context) {

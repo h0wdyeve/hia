@@ -37,6 +37,8 @@ func main() {
 	r.GET("/point", controller.GetAllPoint)
 	r.GET("/point/:id", controller.GetPointByID)
 	r.DELETE("/point/:id", controller.DeletePoint)
+
+	r.Run("localhost:" + PORT)
 }
 
 func CORSMiddleware() gin.HandlerFunc {

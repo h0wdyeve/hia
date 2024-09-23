@@ -10,6 +10,7 @@ type Benefits struct {
 	PointRequired	uint
 	Quantity		uint
 	Code			string
+	Class			string
 	Trip			string
 	Type			string
 

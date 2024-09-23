@@ -2,6 +2,7 @@ package controller
 
 import (
 	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"github.com/h0wdyeve/hia/config"
 	"github.com/h0wdyeve/hia/entity"
@@ -9,16 +10,11 @@ import (
 
 func GetAllBenefits(c *gin.Context) {
 	var Benefits []entity.Benefits
-	db := config.DB()
-
-	results := db.Select("id, Package_name, Price, Duration").Find(&Benefits) //อีฟแก้เอานะเราไม่รู้ต้องเอาไรบ้าง
-
-	if results.Error != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": results.Error.Error()})
+	if err := config.DB().Preload("Airline").Preload("Admin").Find(&Benefits).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-
-	c.JSON(http.StatusOK, Benefits)
+	c.JSON(http.StatusOK, gin.H{"data": Benefits})
 }
 
 func GetBenefitsByID(c *gin.Context) {
@@ -46,5 +42,3 @@ func DeleteBenefits(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Deleted successful"})
 
 }
-
-

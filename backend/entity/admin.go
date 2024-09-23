@@ -10,5 +10,5 @@ type Admin struct {
 	LastName	string
 	BirthDay	string
 
-	Benefits []Benefits `gorm:"foreignKey:AdminID"`
+	// Benefits []Benefits `gorm:"foreignKey:AdminID"`
 }

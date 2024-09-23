@@ -9,16 +9,12 @@ import (
 
 func GetAllPoint(c *gin.Context) {
 	var Point []entity.Point_Calculator
-	db := config.DB()
 
-	results := db.Select("id, Package_name, Price, Duration").Find(&Point)  //อีฟแก้เอานะเราไม่รู้ต้องเอาไรบ้าง
-
-	if results.Error != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": results.Error.Error()})
+	if err := config.DB().Preload("Airline").Find(&Point).Error; err != nil{
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-
-	c.JSON(http.StatusOK, Point)
+	c.JSON(http.StatusOK, gin.H{"data": Point})
 }
 
 func GetPointByID(c *gin.Context) {
