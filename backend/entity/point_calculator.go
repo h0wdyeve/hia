@@ -7,7 +7,6 @@ type Point_Calculator struct {
 	FlyingFrom	string
 	GoingTo		string
 	Class		string
-	ClassCode 	string
 	Point		uint
 
 	AirlineID *uint

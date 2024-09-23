@@ -1,6 +1,7 @@
 package entity
 
-import "gorm.io/gorm"
+import ("gorm.io/gorm"
+		"time")
 
 type Admin struct {
 	gorm.Model
@@ -8,7 +9,7 @@ type Admin struct {
 	Password	string
 	FirstName	string
 	LastName	string
-	BirthDay	string
+	BirthDay	time.Time
 
 	// Benefits []Benefits `gorm:"foreignKey:AdminID"`
 }
