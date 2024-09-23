@@ -22,9 +22,9 @@ func main() {
 	r.GET("/admin/:id", controller.GetAdminByID)
 	r.DELETE("/admin/:id", controller.DeleteAdmin)
 
-	r.GET("/airline", controller.GetAllAirline)
-	r.GET("/airline/:id", controller.GetAirlineByID)
-	r.DELETE("/airline/:id", controller.DeleteAirline)
+	r.GET("/airlines", controller.GetAllAirline)
+	r.GET("/airlines/:id", controller.GetAirlineByID)
+	r.DELETE("/airlines/:id", controller.DeleteAirline)
 
 	r.GET("/benefits", controller.GetAllBenefits)
 	r.GET("/benefits/:id", controller.GetBenefitsByID)

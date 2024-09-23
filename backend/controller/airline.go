@@ -8,15 +8,19 @@ import (
 )
 
 func GetAllAirline(c *gin.Context) {
-	var Airline []entity.Airline
+    var Airline []entity.Airline
 
-	if  err := config.DB().Preload("Benefits").Preload("Point_Calculator").Find(&Airline).Error; err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-		return
-	}
+    // Attempt to retrieve all airlines from the database
+    if err := config.DB().Find(&Airline).Error; err != nil {
+        // If there's an error, return a 500 status code with the error message
+        c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+        return
+    }
 
-	c.JSON(http.StatusOK, gin.H{"data": Airline})
+    // If successful, return the list of airlines with a 200 status code
+    c.JSON(http.StatusOK, gin.H{"airlines": Airline})
 }
+
 
 func GetAirlineByID(c *gin.Context) {
 	var Airline entity.Airline
